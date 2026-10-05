@@ -167,6 +167,29 @@ helps the text field where honored; the picker works regardless.
   steals traffic — check `netstat -ano` before debugging a "broken" widget.
 * **MCP `store_media_file` refuses `.js`** — hence inlining into templates.
 
+## License
+
+This repo's own code (widget, installer, tests) is MIT — see [LICENSE](LICENSE).
+
+It bundles third-party pieces with their own terms, and since the widget is copied into
+your card templates, their attribution travels **inside the JS files themselves**:
+
+* `media/hanzi-writer.min.js` — hanzi-writer v3.7.3, MIT (David Chanin). Header comment
+  states it; full text in `licenses/MIT-hanzi-writer.txt`.
+* `media/hanzi-data.js` and all CDN-loaded stroke data — derived from
+  [hanzi-writer-data](https://github.com/chanind/hanzi-writer-data) ←
+  [Make Me A Hanzi](https://github.com/skishore/makemeahanzi) ← Arphic PL KaitiM GB /
+  UKai fonts, under the **Arphic Public License (1999)** — copyleft-flavoured but
+  permissive in practice: you may redistribute and modify the stroke data provided the
+  license accompanies it and derivatives stay under the same terms (that's why the header
+  comment points at it and `licenses/ARPHICPL.TXT` is in this repo — keep both if you
+  fork or redistribute the data). Note it is the *1999* APL, not Arphic's stricter 2000
+  version. Nothing you *type into Anki* is affected; the obligation covers the stroke
+  data files, which the header + licenses/ satisfy for template redistribution.
+
+Anki, AnkiDroid, AnkiConnect, hanzi-writer and Make Me A Hanzi are trademarks/projects of
+their respective owners; mentioning them is not an endorsement.
+
 ## History
 
 The stroke matcher was validated first as a dependency-free spike against real MMAH

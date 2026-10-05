@@ -23,6 +23,49 @@ wrong-order strokes).
 
 ---
 
+## In plain English
+
+**What it is.** Anki normally asks "did you get it right?" and you answer with a button.
+hanzi-drill adds a third way: it makes your existing cards *interactive*. A small program
+("widget") gets embedded into your note type's card templates, so when a card opens,
+instead of just reading it, you **trace each character stroke-by-stroke on the screen**
+and **type (or tap) its pinyin**. The program knows the correct stroke order for thousands
+of characters, so it can tell — as you draw — whether that stroke was the right one in the
+right place at the right time, and it beeps/vibrates when you go wrong. When you're done
+(or flip the card), it tells Anki how you did (Good / Hard / Again), so your review
+schedule stays honest without you having to self-grade.
+
+**Where the pieces live.** Nothing is installed on your phone and no app is modified. The
+quiz code is pasted into the *card templates* themselves (a template is the HTML skeleton
+every card of a note type is built from). AnkiDroid renders cards in a web view, so
+JavaScript inside a template runs at review time — that's the whole trick. Stroke-shape
+data downloads once per character and is cached on the device, so reviews work offline
+afterwards.
+
+**Why a PC script is involved.** Card templates can only be edited on Anki desktop, and
+pasting ~80 KB of code into them by hand is miserable. `install.py` is a throwaway helper:
+it talks to your running Anki over a local HTTP API, appends the widget to your templates,
+and takes a backup of the originals first. You run it once, on the PC. After that it can
+be forgotten — new cards you make (by hand or by LLM) inherit the widget automatically,
+and syncing pushes it to your phone like any other template change. `--uninstall` puts
+everything back exactly as it was.
+
+## Adding it to your deck (the short version)
+
+1. **PC, once:** install the AnkiConnect add-on in Anki desktop (Tools → Add-ons → Get
+   Add-ons → code `2055492159`), restart Anki.
+2. **PC, once:** in this folder, `pip install` nothing (pure stdlib), edit
+   `hanzi-drill.conf.json` to name your note type and its characters/pinyin fields, then
+   run `python install.py --dry` (preview) and `python install.py`.
+3. **Sync** Anki, pull on your phone/tablet, review any card from that note type —
+   the drawing canvas is just there.
+4. To undo any of it: `python install.py --uninstall`, sync again.
+
+The detailed version, including auto-detection rules and what to do when it guesses
+wrong, is under "Getting started" below.
+
+---
+
 ## Contents
 
 ```

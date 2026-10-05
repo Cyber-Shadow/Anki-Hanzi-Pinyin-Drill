@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+.hd-box{font-family:sans-serif;max-width:340px;margin:8px auto}
+.hd-hidden{display:none}
+.hd-canvas{width:260px;height:260px;margin:6px auto;border:1px solid #bbb;border-radius:8px;touch-action:none;background:#fff}
+.hd-status{min-height:1.4em;text-align:center;font-weight:600}
+.hd-status.ok{color:#16a34a}.hd-status.bad{color:#dc2626}.hd-status.warn{color:#d97706}
+.hd-pin{width:120px;font-size:1.1em;margin:4px auto;display:block;text-align:center}
+.hd-pinrow{display:flex;gap:6px;align-items:center;justify-content:center}
+.hd-chips{border:1px solid #9994;border-radius:8px;padding:6px;max-width:300px;margin:7px auto}
+.hd-pinfb{text-align:center;min-height:1.3em;color:#555}
+.hd-picker{text-align:center;margin:4px 0}
+
+.hd-chips button{padding:7px 9px;font-size:.95em;min-width:34px}
+.hd-chips button.sel{background:#3b82f6;color:#fff;border-color:#3b82f6}
+.hd-btns{text-align:center;margin:6px 0}
+</style></head><body>
+<div class='hd-box'>
+  <div id='hd-root' style='display:none'>
+  <div class='hd-cjk'>商店 <span style='font-size:.6em'>shāngdiàn</span></div>
+  <div class='hd-canvas' id='hd-canvas'></div>
+  <div class='hd-status' id='hd-status'></div>
+  <div class='hd-pinrow'>
+    <span class='hd-lbl' id='hd-pinhint'>pinyin:</span>
+    <input class='hd-pin' id='hd-pin'>
+    <button id='hd-pinnext'>next ▸</button>
+  </div>
+  <div class='hd-pinfb' id='hd-pinfb'></div>
+  <div class='hd-picker'>
+    <button id='hd-pickbtn'>🔤 syllables</button><span id='hd-pickprev'></span>
+    <div id='hd-pickerbox' style='display:none'>
+      <div class='hd-chips' id='hd-initials'></div>
+      <div class='hd-chips' id='hd-finals'></div>
+      <div class='hd-chips' id='hd-tones'></div>
+      <div class='hd-chips'><button id='hd-pickclear'>clear</button><button id='hd-pickok'>✓ use this</button></div>
+    </div>
+  </div>
+  <div class='hd-btns'>
+    <button id='hd-replay'>replay</button><button id='hd-giveup'>no idea</button><button id='hd-check'>grade</button>
+  </div>
+  </div>
+</div>
+<span class='hd-hidden' id='hd-hanzi'>商店</span>
+<span class='hd-hidden' id='hd-want-pin'>shāngdiàn</span>
+<span class='hd-hidden' id='hd-dir'>writing</span>
+<script>
+// ?word=one -> single-character card (商 / shāng) to test next-button visibility
+if (new URLSearchParams(location.search).get('word') === 'one') {
+  document.getElementById('hd-hanzi').textContent = '商';
+  document.getElementById('hd-want-pin').textContent = 'shāng';
+}
+// ?dir=reading -> recognition card (front would show the chars; widget must browse-only)
+if (new URLSearchParams(location.search).get('dir') === 'reading')
+  document.getElementById('hd-dir').textContent = 'reading';
+</script>
+<script>
+// ?answering=1 -> emulate AnkiDroid OLD reviewer answer WebView: fresh boot, the app
+// already says isDisplayingAnswer()===true, no #answer element exists.
+if (new URLSearchParams(location.search).has('answering'))
+  window.api = { isDisplayingAnswer: () => true };
+</script>
+<script src="media/hanzi-writer.min.js"></script>
+<script src="media/hanzi-data.js"></script>
+<script>
+// fake the AnkiDroid JS surface — log grades instead
+window.graded = [];
+window.ankiAnswerEase1 = () => graded.push(1);
+window.ankiAnswerEase2 = () => graded.push(2);
+window.ankiAnswerEase3 = () => graded.push(3);
+window.ankiAnswerEase4 = () => graded.push(4);
+window.buttonAnswerEase1 = ankiAnswerEase1; window.buttonAnswerEase2 = ankiAnswerEase2;
+window.buttonAnswerEase3 = ankiAnswerEase3; window.buttonAnswerEase4 = ankiAnswerEase4;
+</script>
+<script src="media/hanzi-drill.js?v=26"></script>
+<script>
+// ---- synthetic pointer driver ----
+const canvas = document.getElementById('hd-canvas');
+const svg = canvas.querySelector('svg');
+const rect = () => svg.getBoundingClientRect();
+// MMAH -> widget coords: hanzi-writer positions a 1024 box via its own transform;
+// use the outline path's CTM through an injected reference point instead of guessing.
+function m2p(x, y) { // model -> client px
+  const el = svg.querySelector('#character path'); // any placed path gives us the transform via bbox math
+  return null;
+}
+function toCanvas(mx, my) {
+  // hanzi-writer Positioner: scale = (size-2*pad)/1024, y flipped. Read from the placed outline path.
+  const path = svg.querySelector('#character-main path');
+  const bb = path.getBBox ? null : null;
+  const ctm = path.getCTM(); // model coords -> SVG user space? paths are already in user space;
+  return null;
+}
+// Simpler: dispatch pointer events and map via getScreenCTM inverse of the svg root.
+async function drawStroke(median) {
+  await waitFor(() => { const s = canvas.querySelector('svg'); return s && s.querySelectorAll('g path').length > 0; }, 5000);
+  const svgLive = canvas.querySelector('svg'); // create() rebuilds the svg per character
+  return new Promise((resolve) => {
+    // pick a VISIBLE placed path (defs/mask paths have wrong CTMs); its getCTM maps
+    // model coords -> svg user space; add the svg's client origin to reach client px
+    // pre-reveal quiz svg has no outline group; find any path with real extent for the CTM
+    const cands = [...svgLive.querySelectorAll('path')];
+    const path = cands.find(pt => pt.getBoundingClientRect().width > 1) || cands[0];
+    const ctm = path.getCTM();
+    const origin = svgLive.getBoundingClientRect();
+    const pt = svgLive.createSVGPoint();
+    const clientPts = median.map(([x, y]) => {
+      pt.x = x; pt.y = y;
+      const v = pt.matrixTransform(ctm);
+      return { x: v.x + origin.left, y: v.y + origin.top };
+    });
+    svgLive.dispatchEvent(new MouseEvent('mousedown', { clientX: clientPts[0].x, clientY: clientPts[0].y, bubbles: true }));
+    let i = 1;
+    function step() {
+      if (i >= clientPts.length) {
+        svgLive.dispatchEvent(new MouseEvent('mouseup', { clientX: clientPts[clientPts.length - 1].x, clientY: clientPts[clientPts.length - 1].y, bubbles: true }));
+        return resolve();
+      }
+      svgLive.dispatchEvent(new MouseEvent('mousemove', { clientX: clientPts[i].x, clientY: clientPts[i].y, bubbles: true }));
+      i++; requestAnimationFrame(step);
+    }
+    step();
+  });
+}
+const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+function resample30(pts) { // arc-length resample in model coords, like real touch sampling
+  const cum = [0];
+  for (let i = 1; i < pts.length; i++) cum.push(cum[i-1] + Math.hypot(pts[i][0]-pts[i-1][0], pts[i][1]-pts[i-1][1]));
+  const total = cum[cum.length-1], out = [];
+  let seg = 0;
+  for (let k = 0; k < 30; k++) {
+    const target = total * k / 29;
+    while (seg < cum.length-2 && cum[seg+1] < target) seg++;
+    const span = cum[seg+1]-cum[seg], t = span ? (target-cum[seg])/span : 0;
+    out.push([pts[seg][0]+(pts[seg+1][0]-pts[seg][0])*t, pts[seg][1]+(pts[seg+1][1]-pts[seg][1])*t]);
+  }
+  return out;
+}
+async function waitFor(fn, ms) { const t0 = Date.now(); while (!fn()) { if (Date.now() - t0 > ms) throw new Error('waitFor timeout'); await sleep(50); } }
+window.__mistakes = [];
+window.__log = [];
+window.__test = async (mode) => {
+  window.__driverData = window.__driverData || JSON.parse(JSON.stringify(HD_DATA));
+  const D = (ch) => __driverData[ch];
+  const medians = D('店').medians;
+  if (mode === 'wrongorder') {
+    await waitFor(() => canvas.querySelector('svg g path'), 8000);
+    const s = resample30(medians[3]);
+    await drawStroke(s); await sleep(150);
+    await drawStroke(s); await sleep(150);
+    await drawStroke(s); await sleep(150);
+    return document.getElementById('hd-status').textContent;
+  }
+  // parallel flow: per char the quiz canvas + pinyin input are BOTH live.
+  // Type the pinyin, draw the strokes; widget auto-advances when both complete.
+  const pins = ['shang1', 'dian4'];
+  const chars = ['商', '店'];
+  const quizReady = (ci) => (window.__starts || []).length > ci
+    && window.__HD.sess().charIdx === ci
+    && canvas.querySelector('svg g path');
+  for (let ci = 0; ci < chars.length; ci++) {
+    await waitFor(() => quizReady(ci), 8000);
+    const p = document.getElementById('hd-pin');
+    p.value = pins[ci]; p.dispatchEvent(new Event('input'));
+    await sleep(120);
+    window.__log.push(['pin', chars[ci], window.__HD.sess().pinDone[ci]]);
+    const ms = D(chars[ci]).medians;
+    for (let k = 0; k < ms.length; k++) {
+      await drawStroke(resample30(ms[k]));
+      window.__log.push(['drew', chars[ci], k]);
+      await sleep(60);
+    }
+    await sleep(500);
+  }
+  return document.getElementById('hd-status').textContent;
+};
+</script>
+</body></html>

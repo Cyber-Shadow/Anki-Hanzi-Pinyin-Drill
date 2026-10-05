@@ -1,0 +1,8 @@
+{
+  "mcpUrl": "http://127.0.0.1:3141/",
+  "model": "Mandarin",
+  "charsField": "Characters",
+  "pinyinField": "Pinyin",
+  "writingTemplate": null,
+  "readingTemplate": null
+}

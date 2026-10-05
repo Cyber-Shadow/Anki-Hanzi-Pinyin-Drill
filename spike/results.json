@@ -1,0 +1,4242 @@
+{
+ "strokes": [
+  {
+   "char": "店",
+   "stroke": 0,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 4424
+  },
+  {
+   "char": "店",
+   "stroke": 0,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 1044.9
+  },
+  {
+   "char": "店",
+   "stroke": 0,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 1105.8
+  },
+  {
+   "char": "店",
+   "stroke": 0,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 845
+  },
+  {
+   "char": "店",
+   "stroke": 0,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 1316.1
+  },
+  {
+   "char": "店",
+   "stroke": 0,
+   "test": "wrong-order(shift+1)",
+   "accept": false,
+   "backwards": false,
+   "us": 2484.4
+  },
+  {
+   "char": "店",
+   "stroke": 0,
+   "test": "wrong-order(+2)",
+   "accept": false,
+   "backwards": false,
+   "us": 12.8
+  },
+  {
+   "char": "店",
+   "stroke": 0,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 1129.8
+  },
+  {
+   "char": "店",
+   "stroke": 0,
+   "test": "translated(+220,+0)",
+   "accept": true,
+   "backwards": false,
+   "us": 1106.6
+  },
+  {
+   "char": "店",
+   "stroke": 0,
+   "test": "undershoot(50%)",
+   "accept": true,
+   "backwards": false,
+   "us": 452.9
+  },
+  {
+   "char": "店",
+   "stroke": 0,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 364.4
+  },
+  {
+   "char": "店",
+   "stroke": 0,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 17.2
+  },
+  {
+   "char": "店",
+   "stroke": 1,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 829.3
+  },
+  {
+   "char": "店",
+   "stroke": 1,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 1501.8
+  },
+  {
+   "char": "店",
+   "stroke": 1,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 1092.1
+  },
+  {
+   "char": "店",
+   "stroke": 1,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 985.4
+  },
+  {
+   "char": "店",
+   "stroke": 1,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 660.9
+  },
+  {
+   "char": "店",
+   "stroke": 1,
+   "test": "wrong-order(shift+1)",
+   "accept": false,
+   "backwards": false,
+   "us": 3.7
+  },
+  {
+   "char": "店",
+   "stroke": 1,
+   "test": "wrong-order(+2)",
+   "accept": false,
+   "backwards": false,
+   "us": 2.3
+  },
+  {
+   "char": "店",
+   "stroke": 1,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 367
+  },
+  {
+   "char": "店",
+   "stroke": 1,
+   "test": "translated(+220,+0)",
+   "accept": true,
+   "backwards": false,
+   "us": 353.3
+  },
+  {
+   "char": "店",
+   "stroke": 1,
+   "test": "undershoot(50%)",
+   "accept": true,
+   "backwards": false,
+   "us": 1771.4
+  },
+  {
+   "char": "店",
+   "stroke": 1,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 596.7
+  },
+  {
+   "char": "店",
+   "stroke": 1,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 6.7
+  },
+  {
+   "char": "店",
+   "stroke": 2,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 564.7
+  },
+  {
+   "char": "店",
+   "stroke": 2,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 588.5
+  },
+  {
+   "char": "店",
+   "stroke": 2,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 612.9
+  },
+  {
+   "char": "店",
+   "stroke": 2,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 559.3
+  },
+  {
+   "char": "店",
+   "stroke": 2,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 1195
+  },
+  {
+   "char": "店",
+   "stroke": 2,
+   "test": "wrong-order(shift+1)",
+   "accept": false,
+   "backwards": false,
+   "us": 6.4
+  },
+  {
+   "char": "店",
+   "stroke": 2,
+   "test": "wrong-order(+2)",
+   "accept": false,
+   "backwards": false,
+   "us": 4.9
+  },
+  {
+   "char": "店",
+   "stroke": 2,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 616.5
+  },
+  {
+   "char": "店",
+   "stroke": 2,
+   "test": "translated(+220,+0)",
+   "accept": false,
+   "backwards": false,
+   "us": 5.8
+  },
+  {
+   "char": "店",
+   "stroke": 2,
+   "test": "undershoot(50%)",
+   "accept": false,
+   "backwards": false,
+   "us": 1298.5
+  },
+  {
+   "char": "店",
+   "stroke": 2,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 708.9
+  },
+  {
+   "char": "店",
+   "stroke": 2,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 1.6
+  },
+  {
+   "char": "店",
+   "stroke": 3,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 1324.5
+  },
+  {
+   "char": "店",
+   "stroke": 3,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 1125.5
+  },
+  {
+   "char": "店",
+   "stroke": 3,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 1372.4
+  },
+  {
+   "char": "店",
+   "stroke": 3,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 1177.7
+  },
+  {
+   "char": "店",
+   "stroke": 3,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 838
+  },
+  {
+   "char": "店",
+   "stroke": 3,
+   "test": "wrong-order(shift+1)",
+   "accept": false,
+   "backwards": false,
+   "us": 925.6
+  },
+  {
+   "char": "店",
+   "stroke": 3,
+   "test": "wrong-order(+2)",
+   "accept": false,
+   "backwards": false,
+   "us": 5.4
+  },
+  {
+   "char": "店",
+   "stroke": 3,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 680.5
+  },
+  {
+   "char": "店",
+   "stroke": 3,
+   "test": "translated(+220,+0)",
+   "accept": false,
+   "backwards": false,
+   "us": 2.2
+  },
+  {
+   "char": "店",
+   "stroke": 3,
+   "test": "undershoot(50%)",
+   "accept": true,
+   "backwards": false,
+   "us": 813.3
+  },
+  {
+   "char": "店",
+   "stroke": 3,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 666.4
+  },
+  {
+   "char": "店",
+   "stroke": 3,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 1.1
+  },
+  {
+   "char": "店",
+   "stroke": 4,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 417.2
+  },
+  {
+   "char": "店",
+   "stroke": 4,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 520.5
+  },
+  {
+   "char": "店",
+   "stroke": 4,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 445.7
+  },
+  {
+   "char": "店",
+   "stroke": 4,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 550
+  },
+  {
+   "char": "店",
+   "stroke": 4,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 1273.7
+  },
+  {
+   "char": "店",
+   "stroke": 4,
+   "test": "wrong-order(shift+1)",
+   "accept": false,
+   "backwards": false,
+   "us": 7.1
+  },
+  {
+   "char": "店",
+   "stroke": 4,
+   "test": "wrong-order(+2)",
+   "accept": false,
+   "backwards": false,
+   "us": 3.5
+  },
+  {
+   "char": "店",
+   "stroke": 4,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 510.4
+  },
+  {
+   "char": "店",
+   "stroke": 4,
+   "test": "translated(+220,+0)",
+   "accept": true,
+   "backwards": false,
+   "us": 304.7
+  },
+  {
+   "char": "店",
+   "stroke": 4,
+   "test": "undershoot(50%)",
+   "accept": true,
+   "backwards": false,
+   "us": 363.8
+  },
+  {
+   "char": "店",
+   "stroke": 4,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 369.1
+  },
+  {
+   "char": "店",
+   "stroke": 4,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 0.8
+  },
+  {
+   "char": "店",
+   "stroke": 5,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 1016.9
+  },
+  {
+   "char": "店",
+   "stroke": 5,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 1147.9
+  },
+  {
+   "char": "店",
+   "stroke": 5,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 1159
+  },
+  {
+   "char": "店",
+   "stroke": 5,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 1314.8
+  },
+  {
+   "char": "店",
+   "stroke": 5,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 813.6
+  },
+  {
+   "char": "店",
+   "stroke": 5,
+   "test": "wrong-order(shift+1)",
+   "accept": false,
+   "backwards": false,
+   "us": 3.7
+  },
+  {
+   "char": "店",
+   "stroke": 5,
+   "test": "wrong-order(+2)",
+   "accept": false,
+   "backwards": false,
+   "us": 17.8
+  },
+  {
+   "char": "店",
+   "stroke": 5,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 713.2
+  },
+  {
+   "char": "店",
+   "stroke": 5,
+   "test": "translated(+220,+0)",
+   "accept": false,
+   "backwards": false,
+   "us": 1.8
+  },
+  {
+   "char": "店",
+   "stroke": 5,
+   "test": "undershoot(50%)",
+   "accept": true,
+   "backwards": false,
+   "us": 1375.7
+  },
+  {
+   "char": "店",
+   "stroke": 5,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 2053.9
+  },
+  {
+   "char": "店",
+   "stroke": 5,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 1.7
+  },
+  {
+   "char": "店",
+   "stroke": 6,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 757.4
+  },
+  {
+   "char": "店",
+   "stroke": 6,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 296
+  },
+  {
+   "char": "店",
+   "stroke": 6,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 399.1
+  },
+  {
+   "char": "店",
+   "stroke": 6,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 773.2
+  },
+  {
+   "char": "店",
+   "stroke": 6,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 638.1
+  },
+  {
+   "char": "店",
+   "stroke": 6,
+   "test": "wrong-order(shift+1)",
+   "accept": false,
+   "backwards": false,
+   "us": 685.4
+  },
+  {
+   "char": "店",
+   "stroke": 6,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 343.5
+  },
+  {
+   "char": "店",
+   "stroke": 6,
+   "test": "translated(+220,+0)",
+   "accept": true,
+   "backwards": false,
+   "us": 283.7
+  },
+  {
+   "char": "店",
+   "stroke": 6,
+   "test": "undershoot(50%)",
+   "accept": false,
+   "backwards": false,
+   "us": 1035.2
+  },
+  {
+   "char": "店",
+   "stroke": 6,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 710.6
+  },
+  {
+   "char": "店",
+   "stroke": 6,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 9
+  },
+  {
+   "char": "店",
+   "stroke": 7,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 589.9
+  },
+  {
+   "char": "店",
+   "stroke": 7,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 677.6
+  },
+  {
+   "char": "店",
+   "stroke": 7,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 488.6
+  },
+  {
+   "char": "店",
+   "stroke": 7,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 361.4
+  },
+  {
+   "char": "店",
+   "stroke": 7,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 615.7
+  },
+  {
+   "char": "店",
+   "stroke": 7,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 332.4
+  },
+  {
+   "char": "店",
+   "stroke": 7,
+   "test": "translated(+220,+0)",
+   "accept": true,
+   "backwards": false,
+   "us": 339.3
+  },
+  {
+   "char": "店",
+   "stroke": 7,
+   "test": "undershoot(50%)",
+   "accept": true,
+   "backwards": false,
+   "us": 338.8
+  },
+  {
+   "char": "店",
+   "stroke": 7,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 273.2
+  },
+  {
+   "char": "店",
+   "stroke": 7,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 0.6
+  },
+  {
+   "char": "商",
+   "stroke": 0,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 726.5
+  },
+  {
+   "char": "商",
+   "stroke": 0,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 470.2
+  },
+  {
+   "char": "商",
+   "stroke": 0,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 695.4
+  },
+  {
+   "char": "商",
+   "stroke": 0,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 681.5
+  },
+  {
+   "char": "商",
+   "stroke": 0,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 697.1
+  },
+  {
+   "char": "商",
+   "stroke": 0,
+   "test": "wrong-order(shift+1)",
+   "accept": false,
+   "backwards": false,
+   "us": 594
+  },
+  {
+   "char": "商",
+   "stroke": 0,
+   "test": "wrong-order(+2)",
+   "accept": false,
+   "backwards": false,
+   "us": 653.4
+  },
+  {
+   "char": "商",
+   "stroke": 0,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 337.1
+  },
+  {
+   "char": "商",
+   "stroke": 0,
+   "test": "translated(+220,+0)",
+   "accept": true,
+   "backwards": false,
+   "us": 923.2
+  },
+  {
+   "char": "商",
+   "stroke": 0,
+   "test": "undershoot(50%)",
+   "accept": true,
+   "backwards": false,
+   "us": 360.9
+  },
+  {
+   "char": "商",
+   "stroke": 0,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 356.2
+  },
+  {
+   "char": "商",
+   "stroke": 0,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 0.4
+  },
+  {
+   "char": "商",
+   "stroke": 1,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 288.3
+  },
+  {
+   "char": "商",
+   "stroke": 1,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 378.4
+  },
+  {
+   "char": "商",
+   "stroke": 1,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 369.7
+  },
+  {
+   "char": "商",
+   "stroke": 1,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 375.4
+  },
+  {
+   "char": "商",
+   "stroke": 1,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 602.5
+  },
+  {
+   "char": "商",
+   "stroke": 1,
+   "test": "wrong-order(shift+1)",
+   "accept": false,
+   "backwards": false,
+   "us": 663.6
+  },
+  {
+   "char": "商",
+   "stroke": 1,
+   "test": "wrong-order(+2)",
+   "accept": false,
+   "backwards": false,
+   "us": 3.4
+  },
+  {
+   "char": "商",
+   "stroke": 1,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 355
+  },
+  {
+   "char": "商",
+   "stroke": 1,
+   "test": "translated(+220,+0)",
+   "accept": true,
+   "backwards": false,
+   "us": 304.3
+  },
+  {
+   "char": "商",
+   "stroke": 1,
+   "test": "undershoot(50%)",
+   "accept": false,
+   "backwards": false,
+   "us": 1161.3
+  },
+  {
+   "char": "商",
+   "stroke": 1,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 687.3
+  },
+  {
+   "char": "商",
+   "stroke": 1,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 2.3
+  },
+  {
+   "char": "商",
+   "stroke": 2,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 2276.8
+  },
+  {
+   "char": "商",
+   "stroke": 2,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 1791.1
+  },
+  {
+   "char": "商",
+   "stroke": 2,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 1661.7
+  },
+  {
+   "char": "商",
+   "stroke": 2,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 2041.9
+  },
+  {
+   "char": "商",
+   "stroke": 2,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 654.9
+  },
+  {
+   "char": "商",
+   "stroke": 2,
+   "test": "wrong-order(shift+1)",
+   "accept": false,
+   "backwards": false,
+   "us": 3.2
+  },
+  {
+   "char": "商",
+   "stroke": 2,
+   "test": "wrong-order(+2)",
+   "accept": false,
+   "backwards": false,
+   "us": 1.5
+  },
+  {
+   "char": "商",
+   "stroke": 2,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 707.4
+  },
+  {
+   "char": "商",
+   "stroke": 2,
+   "test": "translated(+220,+0)",
+   "accept": false,
+   "backwards": false,
+   "us": 1.5
+  },
+  {
+   "char": "商",
+   "stroke": 2,
+   "test": "undershoot(50%)",
+   "accept": true,
+   "backwards": false,
+   "us": 1165.2
+  },
+  {
+   "char": "商",
+   "stroke": 2,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 1882.2
+  },
+  {
+   "char": "商",
+   "stroke": 2,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 1.2
+  },
+  {
+   "char": "商",
+   "stroke": 3,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 797.9
+  },
+  {
+   "char": "商",
+   "stroke": 3,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 847.7
+  },
+  {
+   "char": "商",
+   "stroke": 3,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 813.8
+  },
+  {
+   "char": "商",
+   "stroke": 3,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 840.1
+  },
+  {
+   "char": "商",
+   "stroke": 3,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 572.7
+  },
+  {
+   "char": "商",
+   "stroke": 3,
+   "test": "wrong-order(shift+1)",
+   "accept": false,
+   "backwards": false,
+   "us": 87.7
+  },
+  {
+   "char": "商",
+   "stroke": 3,
+   "test": "wrong-order(+2)",
+   "accept": false,
+   "backwards": false,
+   "us": 2
+  },
+  {
+   "char": "商",
+   "stroke": 3,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 302
+  },
+  {
+   "char": "商",
+   "stroke": 3,
+   "test": "translated(+220,+0)",
+   "accept": false,
+   "backwards": false,
+   "us": 1.2
+  },
+  {
+   "char": "商",
+   "stroke": 3,
+   "test": "undershoot(50%)",
+   "accept": true,
+   "backwards": false,
+   "us": 789.5
+  },
+  {
+   "char": "商",
+   "stroke": 3,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 1244.9
+  },
+  {
+   "char": "商",
+   "stroke": 3,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 1.2
+  },
+  {
+   "char": "商",
+   "stroke": 4,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 674.2
+  },
+  {
+   "char": "商",
+   "stroke": 4,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 924
+  },
+  {
+   "char": "商",
+   "stroke": 4,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 921.4
+  },
+  {
+   "char": "商",
+   "stroke": 4,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 928.3
+  },
+  {
+   "char": "商",
+   "stroke": 4,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 621.9
+  },
+  {
+   "char": "商",
+   "stroke": 4,
+   "test": "wrong-order(shift+1)",
+   "accept": false,
+   "backwards": false,
+   "us": 2.5
+  },
+  {
+   "char": "商",
+   "stroke": 4,
+   "test": "wrong-order(+2)",
+   "accept": false,
+   "backwards": false,
+   "us": 548.2
+  },
+  {
+   "char": "商",
+   "stroke": 4,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 1173.1
+  },
+  {
+   "char": "商",
+   "stroke": 4,
+   "test": "translated(+220,+0)",
+   "accept": false,
+   "backwards": false,
+   "us": 2.9
+  },
+  {
+   "char": "商",
+   "stroke": 4,
+   "test": "undershoot(50%)",
+   "accept": false,
+   "backwards": false,
+   "us": 635.6
+  },
+  {
+   "char": "商",
+   "stroke": 4,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 567.7
+  },
+  {
+   "char": "商",
+   "stroke": 4,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 0.6
+  },
+  {
+   "char": "商",
+   "stroke": 5,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 709
+  },
+  {
+   "char": "商",
+   "stroke": 5,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 710.6
+  },
+  {
+   "char": "商",
+   "stroke": 5,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 519.5
+  },
+  {
+   "char": "商",
+   "stroke": 5,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 723.4
+  },
+  {
+   "char": "商",
+   "stroke": 5,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 1491
+  },
+  {
+   "char": "商",
+   "stroke": 5,
+   "test": "wrong-order(shift+1)",
+   "accept": false,
+   "backwards": false,
+   "us": 1538.4
+  },
+  {
+   "char": "商",
+   "stroke": 5,
+   "test": "wrong-order(+2)",
+   "accept": false,
+   "backwards": false,
+   "us": 956.7
+  },
+  {
+   "char": "商",
+   "stroke": 5,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 735.5
+  },
+  {
+   "char": "商",
+   "stroke": 5,
+   "test": "translated(+220,+0)",
+   "accept": false,
+   "backwards": false,
+   "us": 4.1
+  },
+  {
+   "char": "商",
+   "stroke": 5,
+   "test": "undershoot(50%)",
+   "accept": false,
+   "backwards": false,
+   "us": 912.6
+  },
+  {
+   "char": "商",
+   "stroke": 5,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 678.1
+  },
+  {
+   "char": "商",
+   "stroke": 5,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 0.5
+  },
+  {
+   "char": "商",
+   "stroke": 6,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 1397.6
+  },
+  {
+   "char": "商",
+   "stroke": 6,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 1837
+  },
+  {
+   "char": "商",
+   "stroke": 6,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 1403.3
+  },
+  {
+   "char": "商",
+   "stroke": 6,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 1418.9
+  },
+  {
+   "char": "商",
+   "stroke": 6,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 633.9
+  },
+  {
+   "char": "商",
+   "stroke": 6,
+   "test": "wrong-order(shift+1)",
+   "accept": false,
+   "backwards": false,
+   "us": 758.9
+  },
+  {
+   "char": "商",
+   "stroke": 6,
+   "test": "wrong-order(+2)",
+   "accept": false,
+   "backwards": false,
+   "us": 566.3
+  },
+  {
+   "char": "商",
+   "stroke": 6,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 654.5
+  },
+  {
+   "char": "商",
+   "stroke": 6,
+   "test": "translated(+220,+0)",
+   "accept": false,
+   "backwards": false,
+   "us": 1.7
+  },
+  {
+   "char": "商",
+   "stroke": 6,
+   "test": "undershoot(50%)",
+   "accept": true,
+   "backwards": false,
+   "us": 1948.4
+  },
+  {
+   "char": "商",
+   "stroke": 6,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 1356.1
+  },
+  {
+   "char": "商",
+   "stroke": 6,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 1.5
+  },
+  {
+   "char": "商",
+   "stroke": 7,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 768.7
+  },
+  {
+   "char": "商",
+   "stroke": 7,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 850.9
+  },
+  {
+   "char": "商",
+   "stroke": 7,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 779.1
+  },
+  {
+   "char": "商",
+   "stroke": 7,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 851.3
+  },
+  {
+   "char": "商",
+   "stroke": 7,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 558.3
+  },
+  {
+   "char": "商",
+   "stroke": 7,
+   "test": "wrong-order(shift+1)",
+   "accept": false,
+   "backwards": false,
+   "us": 1.6
+  },
+  {
+   "char": "商",
+   "stroke": 7,
+   "test": "wrong-order(+2)",
+   "accept": false,
+   "backwards": false,
+   "us": 919.6
+  },
+  {
+   "char": "商",
+   "stroke": 7,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 322.9
+  },
+  {
+   "char": "商",
+   "stroke": 7,
+   "test": "translated(+220,+0)",
+   "accept": false,
+   "backwards": false,
+   "us": 1.9
+  },
+  {
+   "char": "商",
+   "stroke": 7,
+   "test": "undershoot(50%)",
+   "accept": true,
+   "backwards": false,
+   "us": 840.9
+  },
+  {
+   "char": "商",
+   "stroke": 7,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 800.5
+  },
+  {
+   "char": "商",
+   "stroke": 7,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 0.6
+  },
+  {
+   "char": "商",
+   "stroke": 8,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 1170.1
+  },
+  {
+   "char": "商",
+   "stroke": 8,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 1491.7
+  },
+  {
+   "char": "商",
+   "stroke": 8,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 1134.6
+  },
+  {
+   "char": "商",
+   "stroke": 8,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 1067.9
+  },
+  {
+   "char": "商",
+   "stroke": 8,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 620
+  },
+  {
+   "char": "商",
+   "stroke": 8,
+   "test": "wrong-order(shift+1)",
+   "accept": false,
+   "backwards": false,
+   "us": 842.2
+  },
+  {
+   "char": "商",
+   "stroke": 8,
+   "test": "wrong-order(+2)",
+   "accept": false,
+   "backwards": false,
+   "us": 686.3
+  },
+  {
+   "char": "商",
+   "stroke": 8,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 1187.9
+  },
+  {
+   "char": "商",
+   "stroke": 8,
+   "test": "translated(+220,+0)",
+   "accept": false,
+   "backwards": false,
+   "us": 2.3
+  },
+  {
+   "char": "商",
+   "stroke": 8,
+   "test": "undershoot(50%)",
+   "accept": true,
+   "backwards": false,
+   "us": 1049.2
+  },
+  {
+   "char": "商",
+   "stroke": 8,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 1032.2
+  },
+  {
+   "char": "商",
+   "stroke": 8,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 0.9
+  },
+  {
+   "char": "商",
+   "stroke": 9,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 1130
+  },
+  {
+   "char": "商",
+   "stroke": 9,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 1029.8
+  },
+  {
+   "char": "商",
+   "stroke": 9,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 1294.7
+  },
+  {
+   "char": "商",
+   "stroke": 9,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 1087.9
+  },
+  {
+   "char": "商",
+   "stroke": 9,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 1421.5
+  },
+  {
+   "char": "商",
+   "stroke": 9,
+   "test": "wrong-order(shift+1)",
+   "accept": false,
+   "backwards": false,
+   "us": 864.4
+  },
+  {
+   "char": "商",
+   "stroke": 9,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 590.4
+  },
+  {
+   "char": "商",
+   "stroke": 9,
+   "test": "translated(+220,+0)",
+   "accept": true,
+   "backwards": false,
+   "us": 871.7
+  },
+  {
+   "char": "商",
+   "stroke": 9,
+   "test": "undershoot(50%)",
+   "accept": false,
+   "backwards": false,
+   "us": 1150
+  },
+  {
+   "char": "商",
+   "stroke": 9,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 1229.3
+  },
+  {
+   "char": "商",
+   "stroke": 9,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 1.4
+  },
+  {
+   "char": "商",
+   "stroke": 10,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 282.6
+  },
+  {
+   "char": "商",
+   "stroke": 10,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 313.5
+  },
+  {
+   "char": "商",
+   "stroke": 10,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 387.1
+  },
+  {
+   "char": "商",
+   "stroke": 10,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 683
+  },
+  {
+   "char": "商",
+   "stroke": 10,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 737.2
+  },
+  {
+   "char": "商",
+   "stroke": 10,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 290.2
+  },
+  {
+   "char": "商",
+   "stroke": 10,
+   "test": "translated(+220,+0)",
+   "accept": true,
+   "backwards": false,
+   "us": 366.6
+  },
+  {
+   "char": "商",
+   "stroke": 10,
+   "test": "undershoot(50%)",
+   "accept": true,
+   "backwards": false,
+   "us": 277.1
+  },
+  {
+   "char": "商",
+   "stroke": 10,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 395.3
+  },
+  {
+   "char": "商",
+   "stroke": 10,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 0.4
+  },
+  {
+   "char": "门",
+   "stroke": 0,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 1146.8
+  },
+  {
+   "char": "门",
+   "stroke": 0,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 1323.4
+  },
+  {
+   "char": "门",
+   "stroke": 0,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 1241.8
+  },
+  {
+   "char": "门",
+   "stroke": 0,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 1350.8
+  },
+  {
+   "char": "门",
+   "stroke": 0,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 681
+  },
+  {
+   "char": "门",
+   "stroke": 0,
+   "test": "wrong-order(shift+1)",
+   "accept": false,
+   "backwards": false,
+   "us": 2.6
+  },
+  {
+   "char": "门",
+   "stroke": 0,
+   "test": "wrong-order(+2)",
+   "accept": false,
+   "backwards": false,
+   "us": 1.4
+  },
+  {
+   "char": "门",
+   "stroke": 0,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 784
+  },
+  {
+   "char": "门",
+   "stroke": 0,
+   "test": "translated(+220,+0)",
+   "accept": true,
+   "backwards": false,
+   "us": 756.1
+  },
+  {
+   "char": "门",
+   "stroke": 0,
+   "test": "undershoot(50%)",
+   "accept": true,
+   "backwards": false,
+   "us": 647.1
+  },
+  {
+   "char": "门",
+   "stroke": 0,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 1128.3
+  },
+  {
+   "char": "门",
+   "stroke": 0,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 1.2
+  },
+  {
+   "char": "门",
+   "stroke": 1,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 306.2
+  },
+  {
+   "char": "门",
+   "stroke": 1,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 398.2
+  },
+  {
+   "char": "门",
+   "stroke": 1,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 300.4
+  },
+  {
+   "char": "门",
+   "stroke": 1,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 404.4
+  },
+  {
+   "char": "门",
+   "stroke": 1,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 568.7
+  },
+  {
+   "char": "门",
+   "stroke": 1,
+   "test": "wrong-order(shift+1)",
+   "accept": false,
+   "backwards": false,
+   "us": 2.4
+  },
+  {
+   "char": "门",
+   "stroke": 1,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 387.8
+  },
+  {
+   "char": "门",
+   "stroke": 1,
+   "test": "translated(+220,+0)",
+   "accept": false,
+   "backwards": false,
+   "us": 2.5
+  },
+  {
+   "char": "门",
+   "stroke": 1,
+   "test": "undershoot(50%)",
+   "accept": false,
+   "backwards": false,
+   "us": 561.9
+  },
+  {
+   "char": "门",
+   "stroke": 1,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 360.7
+  },
+  {
+   "char": "门",
+   "stroke": 1,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 0.5
+  },
+  {
+   "char": "门",
+   "stroke": 2,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 687
+  },
+  {
+   "char": "门",
+   "stroke": 2,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 620.2
+  },
+  {
+   "char": "门",
+   "stroke": 2,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 494.4
+  },
+  {
+   "char": "门",
+   "stroke": 2,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 502.8
+  },
+  {
+   "char": "门",
+   "stroke": 2,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 1770.4
+  },
+  {
+   "char": "门",
+   "stroke": 2,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 758.7
+  },
+  {
+   "char": "门",
+   "stroke": 2,
+   "test": "translated(+220,+0)",
+   "accept": true,
+   "backwards": false,
+   "us": 716.4
+  },
+  {
+   "char": "门",
+   "stroke": 2,
+   "test": "undershoot(50%)",
+   "accept": false,
+   "backwards": false,
+   "us": 900.2
+  },
+  {
+   "char": "门",
+   "stroke": 2,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 679.4
+  },
+  {
+   "char": "门",
+   "stroke": 2,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 0.4
+  },
+  {
+   "char": "开",
+   "stroke": 0,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 620.3
+  },
+  {
+   "char": "开",
+   "stroke": 0,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 974.2
+  },
+  {
+   "char": "开",
+   "stroke": 0,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 888.9
+  },
+  {
+   "char": "开",
+   "stroke": 0,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 664.9
+  },
+  {
+   "char": "开",
+   "stroke": 0,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 626.1
+  },
+  {
+   "char": "开",
+   "stroke": 0,
+   "test": "wrong-order(shift+1)",
+   "accept": false,
+   "backwards": false,
+   "us": 590
+  },
+  {
+   "char": "开",
+   "stroke": 0,
+   "test": "wrong-order(+2)",
+   "accept": false,
+   "backwards": false,
+   "us": 2.3
+  },
+  {
+   "char": "开",
+   "stroke": 0,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 358.7
+  },
+  {
+   "char": "开",
+   "stroke": 0,
+   "test": "translated(+220,+0)",
+   "accept": true,
+   "backwards": false,
+   "us": 573.8
+  },
+  {
+   "char": "开",
+   "stroke": 0,
+   "test": "undershoot(50%)",
+   "accept": true,
+   "backwards": false,
+   "us": 1067.5
+  },
+  {
+   "char": "开",
+   "stroke": 0,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 632.6
+  },
+  {
+   "char": "开",
+   "stroke": 0,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 1.2
+  },
+  {
+   "char": "开",
+   "stroke": 1,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 399.4
+  },
+  {
+   "char": "开",
+   "stroke": 1,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 284.5
+  },
+  {
+   "char": "开",
+   "stroke": 1,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 293.1
+  },
+  {
+   "char": "开",
+   "stroke": 1,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 409.3
+  },
+  {
+   "char": "开",
+   "stroke": 1,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 650.1
+  },
+  {
+   "char": "开",
+   "stroke": 1,
+   "test": "wrong-order(shift+1)",
+   "accept": false,
+   "backwards": false,
+   "us": 2.4
+  },
+  {
+   "char": "开",
+   "stroke": 1,
+   "test": "wrong-order(+2)",
+   "accept": false,
+   "backwards": false,
+   "us": 2.2
+  },
+  {
+   "char": "开",
+   "stroke": 1,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 293.5
+  },
+  {
+   "char": "开",
+   "stroke": 1,
+   "test": "translated(+220,+0)",
+   "accept": true,
+   "backwards": false,
+   "us": 304.5
+  },
+  {
+   "char": "开",
+   "stroke": 1,
+   "test": "undershoot(50%)",
+   "accept": false,
+   "backwards": false,
+   "us": 724.5
+  },
+  {
+   "char": "开",
+   "stroke": 1,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 292.9
+  },
+  {
+   "char": "开",
+   "stroke": 1,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 0.5
+  },
+  {
+   "char": "开",
+   "stroke": 2,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 396.3
+  },
+  {
+   "char": "开",
+   "stroke": 2,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 315.9
+  },
+  {
+   "char": "开",
+   "stroke": 2,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 373.6
+  },
+  {
+   "char": "开",
+   "stroke": 2,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 403.5
+  },
+  {
+   "char": "开",
+   "stroke": 2,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 711.4
+  },
+  {
+   "char": "开",
+   "stroke": 2,
+   "test": "wrong-order(shift+1)",
+   "accept": false,
+   "backwards": false,
+   "us": 4.5
+  },
+  {
+   "char": "开",
+   "stroke": 2,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 348.3
+  },
+  {
+   "char": "开",
+   "stroke": 2,
+   "test": "translated(+220,+0)",
+   "accept": false,
+   "backwards": false,
+   "us": 3.4
+  },
+  {
+   "char": "开",
+   "stroke": 2,
+   "test": "undershoot(50%)",
+   "accept": false,
+   "backwards": false,
+   "us": 689.3
+  },
+  {
+   "char": "开",
+   "stroke": 2,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 291.2
+  },
+  {
+   "char": "开",
+   "stroke": 2,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 0.4
+  },
+  {
+   "char": "开",
+   "stroke": 3,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 379.1
+  },
+  {
+   "char": "开",
+   "stroke": 3,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 314.3
+  },
+  {
+   "char": "开",
+   "stroke": 3,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 281.9
+  },
+  {
+   "char": "开",
+   "stroke": 3,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 366.3
+  },
+  {
+   "char": "开",
+   "stroke": 3,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 555
+  },
+  {
+   "char": "开",
+   "stroke": 3,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 348.7
+  },
+  {
+   "char": "开",
+   "stroke": 3,
+   "test": "translated(+220,+0)",
+   "accept": false,
+   "backwards": false,
+   "us": 1.3
+  },
+  {
+   "char": "开",
+   "stroke": 3,
+   "test": "undershoot(50%)",
+   "accept": false,
+   "backwards": false,
+   "us": 633.6
+  },
+  {
+   "char": "开",
+   "stroke": 3,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 278.9
+  },
+  {
+   "char": "开",
+   "stroke": 3,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 0.4
+  },
+  {
+   "char": "吗",
+   "stroke": 0,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 1093
+  },
+  {
+   "char": "吗",
+   "stroke": 0,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 1078.8
+  },
+  {
+   "char": "吗",
+   "stroke": 0,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 1058.7
+  },
+  {
+   "char": "吗",
+   "stroke": 0,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 1153.8
+  },
+  {
+   "char": "吗",
+   "stroke": 0,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 656.6
+  },
+  {
+   "char": "吗",
+   "stroke": 0,
+   "test": "wrong-order(shift+1)",
+   "accept": false,
+   "backwards": false,
+   "us": 1125.1
+  },
+  {
+   "char": "吗",
+   "stroke": 0,
+   "test": "wrong-order(+2)",
+   "accept": false,
+   "backwards": false,
+   "us": 686.9
+  },
+  {
+   "char": "吗",
+   "stroke": 0,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 908.2
+  },
+  {
+   "char": "吗",
+   "stroke": 0,
+   "test": "translated(+220,+0)",
+   "accept": true,
+   "backwards": false,
+   "us": 1613.3
+  },
+  {
+   "char": "吗",
+   "stroke": 0,
+   "test": "undershoot(50%)",
+   "accept": true,
+   "backwards": false,
+   "us": 1058.6
+  },
+  {
+   "char": "吗",
+   "stroke": 0,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 1946.6
+  },
+  {
+   "char": "吗",
+   "stroke": 0,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 2.1
+  },
+  {
+   "char": "吗",
+   "stroke": 1,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 1398.2
+  },
+  {
+   "char": "吗",
+   "stroke": 1,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 1162.1
+  },
+  {
+   "char": "吗",
+   "stroke": 1,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 1202.8
+  },
+  {
+   "char": "吗",
+   "stroke": 1,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 928.6
+  },
+  {
+   "char": "吗",
+   "stroke": 1,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 1837.4
+  },
+  {
+   "char": "吗",
+   "stroke": 1,
+   "test": "wrong-order(shift+1)",
+   "accept": false,
+   "backwards": false,
+   "us": 1147.9
+  },
+  {
+   "char": "吗",
+   "stroke": 1,
+   "test": "wrong-order(+2)",
+   "accept": false,
+   "backwards": false,
+   "us": 3.5
+  },
+  {
+   "char": "吗",
+   "stroke": 1,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 1831.6
+  },
+  {
+   "char": "吗",
+   "stroke": 1,
+   "test": "translated(+220,+0)",
+   "accept": false,
+   "backwards": false,
+   "us": 2985.7
+  },
+  {
+   "char": "吗",
+   "stroke": 1,
+   "test": "undershoot(50%)",
+   "accept": false,
+   "backwards": false,
+   "us": 939.5
+  },
+  {
+   "char": "吗",
+   "stroke": 1,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 1210.5
+  },
+  {
+   "char": "吗",
+   "stroke": 1,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 1.3
+  },
+  {
+   "char": "吗",
+   "stroke": 2,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 287.2
+  },
+  {
+   "char": "吗",
+   "stroke": 2,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 314.3
+  },
+  {
+   "char": "吗",
+   "stroke": 2,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 418.2
+  },
+  {
+   "char": "吗",
+   "stroke": 2,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 306.4
+  },
+  {
+   "char": "吗",
+   "stroke": 2,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 747.4
+  },
+  {
+   "char": "吗",
+   "stroke": 2,
+   "test": "wrong-order(shift+1)",
+   "accept": false,
+   "backwards": false,
+   "us": 4.6
+  },
+  {
+   "char": "吗",
+   "stroke": 2,
+   "test": "wrong-order(+2)",
+   "accept": false,
+   "backwards": false,
+   "us": 2.2
+  },
+  {
+   "char": "吗",
+   "stroke": 2,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 1146.9
+  },
+  {
+   "char": "吗",
+   "stroke": 2,
+   "test": "translated(+220,+0)",
+   "accept": true,
+   "backwards": false,
+   "us": 1124.7
+  },
+  {
+   "char": "吗",
+   "stroke": 2,
+   "test": "undershoot(50%)",
+   "accept": true,
+   "backwards": false,
+   "us": 304
+  },
+  {
+   "char": "吗",
+   "stroke": 2,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 524.8
+  },
+  {
+   "char": "吗",
+   "stroke": 2,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 1
+  },
+  {
+   "char": "吗",
+   "stroke": 3,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 866.8
+  },
+  {
+   "char": "吗",
+   "stroke": 3,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 857.5
+  },
+  {
+   "char": "吗",
+   "stroke": 3,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 839.2
+  },
+  {
+   "char": "吗",
+   "stroke": 3,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 1043.3
+  },
+  {
+   "char": "吗",
+   "stroke": 3,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 601.8
+  },
+  {
+   "char": "吗",
+   "stroke": 3,
+   "test": "wrong-order(shift+1)",
+   "accept": false,
+   "backwards": false,
+   "us": 4.1
+  },
+  {
+   "char": "吗",
+   "stroke": 3,
+   "test": "wrong-order(+2)",
+   "accept": false,
+   "backwards": false,
+   "us": 2.7
+  },
+  {
+   "char": "吗",
+   "stroke": 3,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 413.9
+  },
+  {
+   "char": "吗",
+   "stroke": 3,
+   "test": "translated(+220,+0)",
+   "accept": true,
+   "backwards": false,
+   "us": 532.1
+  },
+  {
+   "char": "吗",
+   "stroke": 3,
+   "test": "undershoot(50%)",
+   "accept": false,
+   "backwards": false,
+   "us": 805.2
+  },
+  {
+   "char": "吗",
+   "stroke": 3,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 324.7
+  },
+  {
+   "char": "吗",
+   "stroke": 3,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 0.5
+  },
+  {
+   "char": "吗",
+   "stroke": 4,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 1174.2
+  },
+  {
+   "char": "吗",
+   "stroke": 4,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 1170.2
+  },
+  {
+   "char": "吗",
+   "stroke": 4,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 1136.4
+  },
+  {
+   "char": "吗",
+   "stroke": 4,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 1185.3
+  },
+  {
+   "char": "吗",
+   "stroke": 4,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 1423
+  },
+  {
+   "char": "吗",
+   "stroke": 4,
+   "test": "wrong-order(shift+1)",
+   "accept": false,
+   "backwards": false,
+   "us": 4.7
+  },
+  {
+   "char": "吗",
+   "stroke": 4,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 661.1
+  },
+  {
+   "char": "吗",
+   "stroke": 4,
+   "test": "translated(+220,+0)",
+   "accept": true,
+   "backwards": false,
+   "us": 669.2
+  },
+  {
+   "char": "吗",
+   "stroke": 4,
+   "test": "undershoot(50%)",
+   "accept": false,
+   "backwards": false,
+   "us": 980.1
+  },
+  {
+   "char": "吗",
+   "stroke": 4,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 699.7
+  },
+  {
+   "char": "吗",
+   "stroke": 4,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 0.8
+  },
+  {
+   "char": "吗",
+   "stroke": 5,
+   "test": "perfect",
+   "accept": true,
+   "backwards": false,
+   "us": 401.8
+  },
+  {
+   "char": "吗",
+   "stroke": 5,
+   "test": "resampled",
+   "accept": true,
+   "backwards": false,
+   "us": 289.4
+  },
+  {
+   "char": "吗",
+   "stroke": 5,
+   "test": "finger-jitter(18)",
+   "accept": true,
+   "backwards": false,
+   "us": 288.4
+  },
+  {
+   "char": "吗",
+   "stroke": 5,
+   "test": "stylus-jitter(6)",
+   "accept": true,
+   "backwards": false,
+   "us": 347.1
+  },
+  {
+   "char": "吗",
+   "stroke": 5,
+   "test": "reversed",
+   "accept": false,
+   "backwards": true,
+   "us": 563.2
+  },
+  {
+   "char": "吗",
+   "stroke": 5,
+   "test": "translated(+120,+120)",
+   "accept": true,
+   "backwards": false,
+   "us": 394.7
+  },
+  {
+   "char": "吗",
+   "stroke": 5,
+   "test": "translated(+220,+0)",
+   "accept": true,
+   "backwards": false,
+   "us": 278.6
+  },
+  {
+   "char": "吗",
+   "stroke": 5,
+   "test": "undershoot(50%)",
+   "accept": false,
+   "backwards": false,
+   "us": 561.3
+  },
+  {
+   "char": "吗",
+   "stroke": 5,
+   "test": "overshoot(1.5x)",
+   "accept": true,
+   "backwards": false,
+   "us": 290.2
+  },
+  {
+   "char": "吗",
+   "stroke": 5,
+   "test": "scribble-1pt",
+   "accept": false,
+   "backwards": false,
+   "us": 0.5
+  }
+ ],
+ "order": [
+  {
+   "char": "店",
+   "expect": 0,
+   "drew": 1,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 0,
+   "drew": 2,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 0,
+   "drew": 3,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 0,
+   "drew": 4,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 0,
+   "drew": 5,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 0,
+   "drew": 6,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 0,
+   "drew": 7,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 1,
+   "drew": 0,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 1,
+   "drew": 2,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 1,
+   "drew": 3,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 1,
+   "drew": 4,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 1,
+   "drew": 5,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 1,
+   "drew": 6,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 1,
+   "drew": 7,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 2,
+   "drew": 0,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 2,
+   "drew": 1,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 2,
+   "drew": 3,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 2,
+   "drew": 4,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 2,
+   "drew": 5,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 2,
+   "drew": 6,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 2,
+   "drew": 7,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 3,
+   "drew": 0,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 3,
+   "drew": 1,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 3,
+   "drew": 2,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 3,
+   "drew": 4,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 3,
+   "drew": 5,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 3,
+   "drew": 6,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 3,
+   "drew": 7,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 4,
+   "drew": 0,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 4,
+   "drew": 1,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 4,
+   "drew": 2,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 4,
+   "drew": 3,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 4,
+   "drew": 5,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 4,
+   "drew": 6,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 4,
+   "drew": 7,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 5,
+   "drew": 0,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 5,
+   "drew": 1,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 5,
+   "drew": 2,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 5,
+   "drew": 3,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 5,
+   "drew": 4,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 5,
+   "drew": 6,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 5,
+   "drew": 7,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 6,
+   "drew": 0,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 6,
+   "drew": 1,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 6,
+   "drew": 2,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 6,
+   "drew": 3,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 6,
+   "drew": 4,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 6,
+   "drew": 5,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 6,
+   "drew": 7,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 7,
+   "drew": 0,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 7,
+   "drew": 1,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 7,
+   "drew": 2,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 7,
+   "drew": 3,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 7,
+   "drew": 4,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 7,
+   "drew": 5,
+   "accept": false
+  },
+  {
+   "char": "店",
+   "expect": 7,
+   "drew": 6,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 0,
+   "drew": 1,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 0,
+   "drew": 2,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 0,
+   "drew": 3,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 0,
+   "drew": 4,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 0,
+   "drew": 5,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 0,
+   "drew": 6,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 0,
+   "drew": 7,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 0,
+   "drew": 8,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 0,
+   "drew": 9,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 0,
+   "drew": 10,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 1,
+   "drew": 0,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 1,
+   "drew": 2,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 1,
+   "drew": 3,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 1,
+   "drew": 4,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 1,
+   "drew": 5,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 1,
+   "drew": 6,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 1,
+   "drew": 7,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 1,
+   "drew": 8,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 1,
+   "drew": 9,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 1,
+   "drew": 10,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 2,
+   "drew": 0,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 2,
+   "drew": 1,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 2,
+   "drew": 3,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 2,
+   "drew": 4,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 2,
+   "drew": 5,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 2,
+   "drew": 6,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 2,
+   "drew": 7,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 2,
+   "drew": 8,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 2,
+   "drew": 9,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 2,
+   "drew": 10,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 3,
+   "drew": 0,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 3,
+   "drew": 1,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 3,
+   "drew": 2,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 3,
+   "drew": 4,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 3,
+   "drew": 5,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 3,
+   "drew": 6,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 3,
+   "drew": 7,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 3,
+   "drew": 8,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 3,
+   "drew": 9,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 3,
+   "drew": 10,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 4,
+   "drew": 0,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 4,
+   "drew": 1,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 4,
+   "drew": 2,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 4,
+   "drew": 3,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 4,
+   "drew": 5,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 4,
+   "drew": 6,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 4,
+   "drew": 7,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 4,
+   "drew": 8,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 4,
+   "drew": 9,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 4,
+   "drew": 10,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 5,
+   "drew": 0,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 5,
+   "drew": 1,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 5,
+   "drew": 2,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 5,
+   "drew": 3,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 5,
+   "drew": 4,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 5,
+   "drew": 6,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 5,
+   "drew": 7,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 5,
+   "drew": 8,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 5,
+   "drew": 9,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 5,
+   "drew": 10,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 6,
+   "drew": 0,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 6,
+   "drew": 1,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 6,
+   "drew": 2,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 6,
+   "drew": 3,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 6,
+   "drew": 4,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 6,
+   "drew": 5,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 6,
+   "drew": 7,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 6,
+   "drew": 8,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 6,
+   "drew": 9,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 6,
+   "drew": 10,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 7,
+   "drew": 0,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 7,
+   "drew": 1,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 7,
+   "drew": 2,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 7,
+   "drew": 3,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 7,
+   "drew": 4,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 7,
+   "drew": 5,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 7,
+   "drew": 6,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 7,
+   "drew": 8,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 7,
+   "drew": 9,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 7,
+   "drew": 10,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 8,
+   "drew": 0,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 8,
+   "drew": 1,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 8,
+   "drew": 2,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 8,
+   "drew": 3,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 8,
+   "drew": 4,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 8,
+   "drew": 5,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 8,
+   "drew": 6,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 8,
+   "drew": 7,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 8,
+   "drew": 9,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 8,
+   "drew": 10,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 9,
+   "drew": 0,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 9,
+   "drew": 1,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 9,
+   "drew": 2,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 9,
+   "drew": 3,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 9,
+   "drew": 4,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 9,
+   "drew": 5,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 9,
+   "drew": 6,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 9,
+   "drew": 7,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 9,
+   "drew": 8,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 9,
+   "drew": 10,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 10,
+   "drew": 0,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 10,
+   "drew": 1,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 10,
+   "drew": 2,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 10,
+   "drew": 3,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 10,
+   "drew": 4,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 10,
+   "drew": 5,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 10,
+   "drew": 6,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 10,
+   "drew": 7,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 10,
+   "drew": 8,
+   "accept": false
+  },
+  {
+   "char": "商",
+   "expect": 10,
+   "drew": 9,
+   "accept": false
+  },
+  {
+   "char": "门",
+   "expect": 0,
+   "drew": 1,
+   "accept": false
+  },
+  {
+   "char": "门",
+   "expect": 0,
+   "drew": 2,
+   "accept": false
+  },
+  {
+   "char": "门",
+   "expect": 1,
+   "drew": 0,
+   "accept": false
+  },
+  {
+   "char": "门",
+   "expect": 1,
+   "drew": 2,
+   "accept": false
+  },
+  {
+   "char": "门",
+   "expect": 2,
+   "drew": 0,
+   "accept": false
+  },
+  {
+   "char": "门",
+   "expect": 2,
+   "drew": 1,
+   "accept": false
+  },
+  {
+   "char": "开",
+   "expect": 0,
+   "drew": 1,
+   "accept": false
+  },
+  {
+   "char": "开",
+   "expect": 0,
+   "drew": 2,
+   "accept": false
+  },
+  {
+   "char": "开",
+   "expect": 0,
+   "drew": 3,
+   "accept": false
+  },
+  {
+   "char": "开",
+   "expect": 1,
+   "drew": 0,
+   "accept": false
+  },
+  {
+   "char": "开",
+   "expect": 1,
+   "drew": 2,
+   "accept": false
+  },
+  {
+   "char": "开",
+   "expect": 1,
+   "drew": 3,
+   "accept": false
+  },
+  {
+   "char": "开",
+   "expect": 2,
+   "drew": 0,
+   "accept": false
+  },
+  {
+   "char": "开",
+   "expect": 2,
+   "drew": 1,
+   "accept": false
+  },
+  {
+   "char": "开",
+   "expect": 2,
+   "drew": 3,
+   "accept": false
+  },
+  {
+   "char": "开",
+   "expect": 3,
+   "drew": 0,
+   "accept": false
+  },
+  {
+   "char": "开",
+   "expect": 3,
+   "drew": 1,
+   "accept": false
+  },
+  {
+   "char": "开",
+   "expect": 3,
+   "drew": 2,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 0,
+   "drew": 1,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 0,
+   "drew": 2,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 0,
+   "drew": 3,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 0,
+   "drew": 4,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 0,
+   "drew": 5,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 1,
+   "drew": 0,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 1,
+   "drew": 2,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 1,
+   "drew": 3,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 1,
+   "drew": 4,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 1,
+   "drew": 5,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 2,
+   "drew": 0,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 2,
+   "drew": 1,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 2,
+   "drew": 3,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 2,
+   "drew": 4,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 2,
+   "drew": 5,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 3,
+   "drew": 0,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 3,
+   "drew": 1,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 3,
+   "drew": 2,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 3,
+   "drew": 4,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 3,
+   "drew": 5,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 4,
+   "drew": 0,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 4,
+   "drew": 1,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 4,
+   "drew": 2,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 4,
+   "drew": 3,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 4,
+   "drew": 5,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 5,
+   "drew": 0,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 5,
+   "drew": 1,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 5,
+   "drew": 2,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 5,
+   "drew": 3,
+   "accept": false
+  },
+  {
+   "char": "吗",
+   "expect": 5,
+   "drew": 4,
+   "accept": false
+  }
+ ]
+}

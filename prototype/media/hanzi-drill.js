@@ -268,23 +268,23 @@
       // Fingers on a 260px canvas are coarse: default stroke leniency (avg-distance
       // threshold 350 model units) rejects honest attempts that start/end slightly off
       // back to strict (user vetoed the 3.5 experiment). leniency is a CREATE-time
-      // option, NOT a quiz() option. The real leniency trap was showHintAfterMisses:
-      // the engine AUTO-ACCEPTS a stroke after N mistakes — scribble 3x and it passed.
-      // Writing front = 0 (never auto-accept, no hint spoiling free recall); reading
-      // front = 3 (guided practice, stubborn dots shouldn't wedge the card).
+      // option, NOT a quiz() option. showHintAfterMisses only FLASHES the target stroke
+      // as a hint (auto-accept is the separate, disabled markStrokeCorrectAfterMisses)
+      // — so it's a spoiler, not forgiveness; keep the thresholds high. Writing = 5,
+      // reading = 6 (was 0/3: hint after the FIRST miss basically gave the answer away).
       var writer = window.HanziWriter.create(ui.canvas, ch, Object.assign({
         width: Math.min(ui.canvas.clientWidth || 260, 260), height: 260, padding: 8,
         showOutline: revealed() || dirMarker() === 'reading', // writing front = free recall; reading front = guided
-        drawingWidth: 5, strokeFadeDuration: 1, leniency: 1, showHintAfterMisses: 0,
+        drawingWidth: 5, strokeFadeDuration: 1, leniency: 1, showHintAfterMisses: 5,
         charDataLoader: function (c, cb) { cb(d); }
       }, glyphColors()));
       setTimeout(function () { if (ui.canvas) ui.canvas.style.visibility = ''; }, 350);
       (window.__starts = window.__starts || []).push(ch);
       log(['start', ch]);
       writer.quiz({
-        // guided reading practice: after 3 misses on a stroke, accept it so a tricky
-        // dot/hook can't wedge the card (writing front keeps 0 = never auto-accept)
-        showHintAfterMisses: dirMarker() === 'reading' ? 3 : 0,
+        // hint = target-stroke flash only, never auto-accept; high thresholds keep it a
+        // last resort for genuinely stuck strokes (user: raise hint threshold too)
+        showHintAfterMisses: dirMarker() === 'reading' ? 6 : 5,
         onCorrectStroke: function (dd) {
           status(charLabel(i) + ' stroke ' + (dd.strokeNum + 1) + ' ✓', 'ok');
           log(['ok', ch, dd.strokeNum]);

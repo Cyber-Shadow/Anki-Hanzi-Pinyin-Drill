@@ -109,11 +109,12 @@ For each character of the word, simultaneously:
 
 1. **Draw it** — hanzi-writer quiz mode on a 260px canvas. Strokes are matched against
    Make Me A Hanzi medians; wrong stroke/order is rejected live (`onMistake` → status +
-   vibrate), correct strokes turn green. Matching is strict (`leniency: 1`, and strokes
-   are *never* auto-accepted after mistakes on the writing card — the engine's
-   `showHintAfterMisses` would otherwise let you scribble your way through). On the
-   writing front ▶/no-idea are hidden (spoilers); the reading card keeps them and does
-   auto-forgive a stubborn stroke after 3 misses (guided practice).
+   vibrate), correct strokes turn green. Matching is strict (`leniency: 1`) and strokes
+   are **never auto-accepted** after mistakes (the engine's `markStrokeCorrectAfterMisses`
+   stays off) — a wrong stroke can only pass by being drawn correctly. Repeated misses
+   eventually *flash* the target stroke as a hint (after 5 misses on the writing card,
+   6 on the guided reading card) — a last-resort spoiler, not forgiveness. On the
+   writing front ▶/no-idea are hidden (spoilers); the reading card keeps them.
 2. **Enter its pinyin** — either the text field (graded live as you type) or — because
    AnkiDroid's stable reviewer can't raise a keyboard for card inputs (issue #18063,
    fixed only in the still-beta new reviewer) — an on-card **🔤 syllables picker**: tap
@@ -228,8 +229,9 @@ reviewer: Settings → About → tap logo 7× → Developer options → new revi
   restyling from another machine, "Fix HTML", card-type changes) clobbers the widget
   block. Re-run `python install.py` afterwards — it's idempotent and takes seconds.
 * **hanzi-writer's `leniency` is a `create()` option** — passing it to `quiz()` is
-  silently ignored. And the knob users actually perceive is `showHintAfterMisses`
-  (auto-accept after N mistakes), not `leniency`.
+  silently ignored. `showHintAfterMisses` only flashes a hint (auto-accept is the
+  separate `markStrokeCorrectAfterMisses`), but the flash spoils free recall — keep
+  its threshold high.
 * **Android IME quirks**: `preventDefault()` on the input's `touchend` suppresses the
   soft keyboard, and after canvas drawing `document.activeElement` can still point at
   the input while the IME is down — wake it with `blur()` then `focus()`.

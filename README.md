@@ -14,27 +14,25 @@ reading miss → Again.
 
 Status: **v0.5** — installed in the author's `Mandarin` note type (both card types),
 driven by this repo's widget source. Long-term plan (not started): a standalone Kotlin
-app with a native port of the grader — see `spike/` for what proved out first.
+app with a native port of the grader (its stroke matcher was validated against real
+Make Me A Hanzi medians in an earlier spike — 100% pass on clean strokes, 0% on
+wrong-order strokes).
 
 ---
 
 ## Contents
 
 ```
-prototype/
-  media/hanzi-drill.js     THE WIDGET (~600 lines, no deps beyond hanzi-writer)
-  media/hanzi-writer.min.js  vendored hanzi-writer 3.x (quiz engine)
-  media/hanzi-data.js      inline stroke data for common chars (offline bootstrap)
-  hanzi-drill.conf.json    YOUR setup: note type, field names, MCP url (see below)
-  hd_common.py             shared config/MCP/detection logic + widget/CSS blocks
-  install.py               install/update/uninstall into ANY note type via Anki MCP
-  build.py                 builds hanzi-drill-proto.apkg (self-contained demo deck)
-  rendercheck.py           renders a note through the LIVE patched templates, asserts invariants
-  grader_test.js           61-case unit harness for the pinyin parser/grader (node, exit 0 = pass)
-  driver.py + test-page.html  browser test rig: synthetic stroke drawing, 12 flow modes
-spike/
-  grader.mjs harness.mjs   golden stroke-matching tests vs real MMAH medians (validated 2026-10)
-  chars.json results.json  stroke data + per-stroke results the Kotlin port must reproduce
+media/hanzi-drill.js         THE WIDGET (~600 lines, no deps beyond hanzi-writer)
+media/hanzi-writer.min.js    vendored hanzi-writer 3.x (quiz engine)
+media/hanzi-data.js          inline stroke data for common chars (offline bootstrap)
+hanzi-drill.conf.json        YOUR setup: note type, field names, MCP url (see below)
+hd_common.py                 shared config/MCP/detection logic + widget/CSS blocks
+install.py                   install/update/uninstall into ANY note type via Anki MCP
+build.py                     builds hanzi-drill-proto.apkg (self-contained demo deck)
+rendercheck.py               renders a note through the LIVE patched templates, asserts invariants
+grader_test.js               61-case unit harness for the pinyin parser/grader (node, exit 0 = pass)
+driver.py + test-page.html   browser test rig: synthetic stroke drawing, 12 flow modes
 ```
 Generated artifacts you can delete/regenerate (git-ignored): `hanzi-drill-proto.apkg`,
 `hd-backup-<model>.json` (pre-install template snapshot), `mandarin-backup.json`.
@@ -46,7 +44,7 @@ Generated artifacts you can delete/regenerate (git-ignored): `hanzi-drill-proto.
    (streamable-HTTP MCP bridge, `http://127.0.0.1:3141/` by default — AnkiConnect
    underneath), Python 3, Node.js. On the phone: AnkiDroid + the same collection via
    AnkiWeb.
-2. **Configure** — edit `prototype/hanzi-drill.conf.json`:
+2. **Configure** — edit `hanzi-drill.conf.json`:
 
    ```json
    {
@@ -67,7 +65,7 @@ Generated artifacts you can delete/regenerate (git-ignored): `hanzi-drill-proto.
    `writingTemplate`/`readingTemplate` if auto-detection guesses wrong. Pinyin may be
    tone-marked (`shāngdiàn`), numeric (`shang1 dian4`) or mixed — spaces optional;
    syllables are matched to characters by position.
-3. **Install** — `cd prototype && python install.py --dry` to preview, then
+3. **Install** — `python install.py --dry` to preview, then
    `python install.py`. Your original templates are snapshotted first
    (`hd-backup-<model>.json`). Sync Anki, pull on the phone, review any card.
 4. **Uninstall** is fully reversible: `python install.py --uninstall` restores the
@@ -76,7 +74,6 @@ Generated artifacts you can delete/regenerate (git-ignored): `hanzi-drill-proto.
 **Ship a widget change** (when hacking on it yourself):
 
 ```bash
-cd prototype
 node grader_test.js            # parser/grader unit tests
 python build.py                # rebuilds proto apkg + syntax/mustache/leak gates
 python install.py              # re-patches the live templates (replaces old widget block)
@@ -171,7 +168,6 @@ fallback script tag as well.
 **Browser-test the flow** without Anki at all:
 
 ```bash
-cd prototype
 python -m http.server 8781 --bind 127.0.0.1     # one server only — see pitfalls
 ```
 
@@ -241,10 +237,12 @@ reviewer: Settings → About → tap logo 7× → Developer options → new revi
 
 ## History / why it's shaped like this
 
-* **spike/** (first): ported hanzi-writer's stroke matcher to dependency-free JS and
-  proved on real MMAH medians that wrong order is rejected 0/214 pairs, reversed strokes
-  32/32, correct strokes survive ±18px finger jitter. That validated the whole idea
-  cheaply before touching Anki.
+* **Stroke-matcher spike** (first): ported hanzi-writer's stroke matcher to
+  dependency-free JS and proved on real MMAH medians that wrong order is rejected 0/214
+  pairs, reversed strokes 32/32, correct strokes survive ±18px finger jitter. That
+  validated the whole idea cheaply before touching Anki. (Spike code lived in `spike/`,
+  removed once the engine shipped; those numbers are the acceptance bar for any future
+  native reimplementation.)
 * **Deck hack before native app**: AnkiDroid has no addon system, so v0 went into card
   templates via its JS API — zero changes to any card-generation workflow (LLM-driven or
   manual), since new notes inherit the patched note type automatically.
@@ -252,6 +250,7 @@ reviewer: Settings → About → tap logo 7× → Developer options → new revi
   canvas (dead keyboard ⇒ undrawable card). **Picker** after confirming the keyboard bug
   is unfixable from template JS in the stable reviewer.
 * **Native Kotlin app** (spike plan, not started): rsdroid + AnkiWeb sync, grader port
-  reproducing `spike/results.json`, CEDICT for tap-to-lookup; writing telemetry goes in
+  reproducing the spike acceptance numbers above, CEDICT for tap-to-lookup; writing
+  telemetry goes in
   the card `data` field so it syncs for free. The deck hack is expected to be good enough
   to review with daily; the app is the upgrade if canvas latency or WebView quirks bite.

@@ -1,9 +1,9 @@
 # generated artifacts — rebuild with python build.py / python install.py
-prototype/hanzi-drill-proto.apkg
-prototype/hanzi-drill+.apkg
-prototype/hd-backup-*.json
-prototype/mandarin-backup.json
-prototype/build/
+hanzi-drill-proto.apkg
+hanzi-drill+.apkg
+hd-backup-*.json
+mandarin-backup.json
+build/
 
 # tooling droppings
 __pycache__/

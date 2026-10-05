@@ -8,8 +8,9 @@ stroke order in real time (vibrates + tells you), and **enter its pinyin** (keyb
 on-card syllable picker). The widget then grades the card for you: clean → Good, stroke
 mistakes → Hard, skipped char or reading miss → Again.
 
-> **Vibe-coded** by Qwen3.8 Flash Next (via Hermes); human-directed and human-tested,
-> not human-reviewed. · Status **v0.5**, in daily use by the author.
+> This repository is entirely vibe-coded w/ Qwen3.8 Flash Next (via Hermes); human-directed and human-tested, not human-reviewed.
+
+> I am not a software engineer.
 
 ## It's just card templates
 

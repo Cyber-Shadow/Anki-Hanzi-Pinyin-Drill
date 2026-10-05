@@ -4,5 +4,6 @@
   "charsField": "Characters",
   "pinyinField": "Pinyin",
   "writingTemplate": null,
-  "readingTemplate": null
+  "readingTemplate": null,
+  "leniency": "moderate"
 }

@@ -41,6 +41,52 @@
     showStatic();
   }
   function dirMarker() { return txt('hd-dir'); } // 'writing' | 'reading' | ''
+
+  // ---------- stroke leniency (user-tunable) ----------
+  // Three real levers in hanzi-writer, all CREATE-time options (ignored by quiz()):
+  //   leniency                  multiplier on the stroke avg-distance match threshold
+  //   averageDistanceThreshold  base threshold in model units (default 350)
+  //   showHintAfterMisses       N misses before the target stroke FLASHES as a hint
+  //                             (never auto-accepts — markStrokeCorrectAfterMisses stays
+  //                             false, which is the only thing that actually forgives)
+  // hd:leniency in localStorage overrides the build default per device (phone vs tablet
+  // fingers differ), cycled from the writing front's ⚙ button.
+  var LENIENCY_PRESETS = {
+    // calibrated to the author's device feedback: 1.0 rejected honest attempts, 3.5 was
+    // vetoed as a giveaway. strict≈stylus, relaxed just under the vetoed level.
+    strict:   { leniency: 1,   averageDistanceThreshold: 350, hintW: 6, hintR: 7 },
+    moderate: { leniency: 2,   averageDistanceThreshold: 350, hintW: 5, hintR: 6 },
+    relaxed:  { leniency: 3,   averageDistanceThreshold: 350, hintW: 4, hintR: 5 },
+  };
+  var LENIENCY_DEFAULT = 'moderate';   // replaced by install.py from hanzi-drill.conf.json
+  var LENIENCY_ORDER = ['strict', 'moderate', 'relaxed'];
+  function leniencyName() {
+    var n = null;
+    try { n = localStorage.getItem('hd:leniency'); } catch (e) {}
+    if (!LENIENCY_PRESETS[n]) {
+      n = LENIENCY_PRESETS[LENIENCY_DEFAULT] ? LENIENCY_DEFAULT : 'moderate';
+    }
+    return n;
+  }
+  function leniencyOpts() { return LENIENCY_PRESETS[leniencyName()]; }
+  function leniencyLabel() {
+    return { strict: '✎ strict', moderate: '✎ normal', relaxed: '✎ relaxed' }[leniencyName()];
+  }
+  function lenButton() {
+    var lb = $('hd-len');
+    if (lb) return lb;
+    // inject into the .hd-btns row (not hard-coded in the template markup, so it also
+    // appears on already-installed templates after a re-install and on the test rig)
+    var check = $('hd-check');
+    var row = check && check.parentNode;
+    if (!row) return null;
+    lb = document.createElement('button');
+    lb.id = 'hd-len';
+    lb.textContent = leniencyLabel();
+    row.insertBefore(lb, check || null);
+    applyNight(lb);
+    return lb;
+  }
   function answerSide() {
     if (!sess) return false;
     return sess.answerCalled || domRevealed() || apiRevealed();
@@ -241,13 +287,18 @@
 
   // ---------- per character: drawing quiz AND pinyin input, simultaneously ----------
   function showChar(i) {
-    sess.charIdx = i; sess.started = true; staticMode = false;
+    sess.charIdx = i; sess.started = true; staticMode = false; sess.drew = false;
     // Writing-card front = free-recall quiz: no answer spoilers, so no ▶/no-idea there.
     // (Reading card keeps them; the static back re-shows ▶ for browsing.)
     var frontQuiz = dirMarker() === 'writing';
     var rbtn = $('hd-replay'), gbtn = $('hd-giveup');
     if (rbtn) rbtn.style.display = frontQuiz ? 'none' : '';
     if (gbtn) gbtn.style.display = frontQuiz ? 'none' : '';
+    var lbtn = lenButton();
+    if (lbtn) { // leniency lives on the writing front only (that's where it bites)
+      lbtn.style.display = frontQuiz ? '' : 'none';
+      lbtn.textContent = leniencyLabel();
+    }
     // single-character card: nothing to advance to — hide next ▸ entirely
     if (ui.next) ui.next.style.display = sess.word.length > 1 ? '' : 'none';
     var ch = sess.word[i];
@@ -265,31 +316,32 @@
       // (strokeFadeDuration). Keep the canvas hidden PAST the fade — revealing at ~260ms
       // mid-fade is what looked like the character "briefly flashing".
       ui.canvas.style.visibility = 'hidden';
-      // Fingers on a 260px canvas are coarse: default stroke leniency (avg-distance
-      // threshold 350 model units) rejects honest attempts that start/end slightly off
-      // back to strict (user vetoed the 3.5 experiment). leniency is a CREATE-time
-      // option, NOT a quiz() option. showHintAfterMisses only FLASHES the target stroke
-      // as a hint (auto-accept is the separate, disabled markStrokeCorrectAfterMisses)
-      // — so it's a spoiler, not forgiveness; keep the thresholds high. Writing = 5,
-      // reading = 6 (was 0/3: hint after the FIRST miss basically gave the answer away).
+      // All leniency knobs are CREATE-time (hanzi-writer ignores them in quiz()).
+      // Presets strict/moderate/relaxed; device override via ⚙ or localStorage
+      // 'hd:leniency'; build default from hanzi-drill.conf.json ("leniency").
+      var lp = leniencyOpts();
+      var reading = dirMarker() === 'reading';
       var writer = window.HanziWriter.create(ui.canvas, ch, Object.assign({
         width: Math.min(ui.canvas.clientWidth || 260, 260), height: 260, padding: 8,
-        showOutline: revealed() || dirMarker() === 'reading', // writing front = free recall; reading front = guided
-        drawingWidth: 5, strokeFadeDuration: 1, leniency: 1, showHintAfterMisses: 5,
+        showOutline: revealed() || reading, // writing front = free recall; reading front = guided
+        drawingWidth: 5, strokeFadeDuration: 1,
+        leniency: lp.leniency, averageDistanceThreshold: lp.averageDistanceThreshold,
         charDataLoader: function (c, cb) { cb(d); }
       }, glyphColors()));
       setTimeout(function () { if (ui.canvas) ui.canvas.style.visibility = ''; }, 350);
       (window.__starts = window.__starts || []).push(ch);
       log(['start', ch]);
       writer.quiz({
-        // hint = target-stroke flash only, never auto-accept; high thresholds keep it a
-        // last resort for genuinely stuck strokes (user: raise hint threshold too)
-        showHintAfterMisses: dirMarker() === 'reading' ? 6 : 5,
+        // hint = target-stroke flash only, never auto-accept; keep thresholds high so
+        // it stays a last resort rather than a giveaway
+        showHintAfterMisses: reading ? lp.hintR : lp.hintW,
         onCorrectStroke: function (dd) {
+          sess.drew = true;
           status(charLabel(i) + ' stroke ' + (dd.strokeNum + 1) + ' ✓', 'ok');
           log(['ok', ch, dd.strokeNum]);
         },
         onMistake: function (dd) {
+          sess.drew = true;
           sess.mistakes++;
           log(['miss', ch, dd.strokeNum, dd.mistakesOnStroke]);
           status(dd.mistakesOnStroke > 0 ? '✗ wrong stroke or order — try again' : '✗ not this stroke', 'bad');
@@ -499,6 +551,20 @@
     var rb = $('hd-replay'), gb = $('hd-giveup'), cb = $('hd-check');
     if (rb && !rb._wired) { rb._wired = true; rb.addEventListener('click', playAnim); }
     if (gb && !gb._wired) { gb._wired = true; gb.addEventListener('click', giveup); }
+    var lb = lenButton();
+    if (lb && !lb._wired) {
+      lb._wired = true;
+      lb.addEventListener('click', function () {
+        var n = LENIENCY_ORDER[(LENIENCY_ORDER.indexOf(leniencyName()) + 1) % LENIENCY_ORDER.length];
+        try { localStorage.setItem('hd:leniency', n); } catch (e) {}
+        lb.textContent = leniencyLabel();
+        if (sess && sess.started && !staticMode && !sess.drew) {
+          showChar(sess.charIdx); // not drawn yet — restart this char so it applies now
+        } else {
+          status(leniencyLabel() + ' — applies from the next character', 'warn');
+        }
+      });
+    }
     if (cb && !cb._wired) {
       cb._wired = true;
       cb.addEventListener('click', function () {
@@ -519,6 +585,7 @@
     });
     var gb = $('hd-giveup'); if (gb) gb.style.display = 'none'; // stay hidden: back is reveal, not skip
     var rb = $('hd-replay'); if (rb) rb.style.display = ''; // ▶ animates the browsed char
+    var lb = $('hd-len'); if (lb) lb.style.display = 'none';
     var cb = $('hd-check'); if (cb) { cb.style.display = ''; applyNight(cb); }
     staticMode = true;
     if (ui.canvas) {
@@ -540,6 +607,7 @@
       if (el) el.style.display = 'none';
     });
     var gb = $('hd-giveup'); if (gb) gb.style.display = 'none';
+    var lb = $('hd-len'); if (lb) lb.style.display = 'none';
     var cb = $('hd-check'); if (cb) cb.style.display = 'none'; // recognition card: grade with Anki's buttons
     var rb = $('hd-replay'); if (rb) rb.style.display = '';
     staticMode = true;

@@ -55,12 +55,15 @@ Config keys:
   "charsField": "Characters",
   "pinyinField": "Pinyin",
   "writingTemplate": null,
-  "readingTemplate": null
+  "readingTemplate": null,
+  "leniency": "moderate"
 }
 ```
 
-`mcpUrl` points at whichever bridge you installed (`:8765` / `:3141`); `backend` may pin
-`"ankiconnect"`/`"mcp"` or stay `null` to auto-probe. Your note type needs **two card
+`leniency` sets the build default (`strict` / `moderate` / `relaxed`); each device can
+still override it in-review with the ✎ button. `mcpUrl` points at whichever bridge you
+installed (`:8765` / `:3141`); `backend` may pin `"ankiconnect"`/`"mcp"` or stay `null`
+to auto-probe. Your note type needs **two card
 types**: one front showing the characters (reading card → *guided* quiz: outline visible)
 and one hiding them (writing card → *free-recall* quiz). Which is which is auto-detected
 from whether the front contains `{{charsField}}`; pin the names in config if it guesses
@@ -77,11 +80,16 @@ fields).
 Per character, two tasks run **in parallel** — nothing gates the canvas, because a dead
 keyboard must never make a card undrawable:
 
-* **Draw** — hanzi-writer quiz mode against Make Me A Hanzi medians. Strict matching
-  (`leniency: 1`); wrong strokes are never auto-accepted — the only way past is to draw
-  it correctly. After many misses (5 writing / 6 reading) the target stroke flashes as a
-  last-resort hint. ▶ replay / "no idea" are hidden on the writing front (spoilers);
-  the reading card keeps them, with a looser hint threshold (guided practice).
+* **Draw** — hanzi-writer quiz mode against Make Me A Hanzi medians. Matching
+  strictness is user-configurable in three presets — **strict / normal / relaxed** —
+  tapped through the ✎ button on the writing front (remembered per device), or set once
+  for everyone via `"leniency"` in `hanzi-drill.conf.json`.
+  Whatever the preset, a wrong stroke is *never auto-accepted* — the leniency knob
+  widens how far off-median a stroke may be drawn, it never forgives the wrong stroke or
+  wrong order. After repeated misses (6/5/4 writing for strict/normal/relaxed) the
+  target stroke flashes as a last-resort hint. ▶ replay / "no idea" are hidden on the
+  writing front (spoilers); the reading card keeps them, with a looser hint threshold
+  (guided practice).
 * **Pinyin** — text field graded live, or the 🔤 picker (tap initial / final / tone).
   The picker exists because AnkiDroid's stable reviewer can't raise a keyboard for card
   inputs (upstream bug #18063), so don't debug that. Grading is strict and tone-aware:

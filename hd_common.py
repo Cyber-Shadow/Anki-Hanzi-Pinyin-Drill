@@ -9,7 +9,8 @@ Config (hanzi-drill.conf.json next to this file, all keys optional):
     "charsField":    "Characters",               # field holding the hanzi
     "pinyinField":   "Pinyin",                   # field holding per-char pinyin (space or concatenated)
     "writingTemplate": null,                     # template names; null = auto-detect
-    "readingTemplate": null
+    "readingTemplate": null,
+    "leniency":        "moderate"                # stroke matching default: strict|moderate|relaxed
   }
 Auto-detection: the template whose FRONT shows the chars field is the 'reading' card
 (chars -> meaning; its quiz goes on the BACK); the one whose front does NOT is the
@@ -26,6 +27,7 @@ DEFAULTS = {
     "pinyinField": "Pinyin",
     "writingTemplate": None,
     "readingTemplate": None,
+    "leniency": "moderate",     # strict | moderate | relaxed (in-review ⚙ overrides per device)
 }
 
 def load_conf():
@@ -122,6 +124,14 @@ def blocks(conf, media_dir=None):
     hw = open(os.path.join(media_dir, "hanzi-writer.min.js"), encoding="utf-8").read()
     dr = open(os.path.join(media_dir, "hanzi-drill.js"), encoding="utf-8").read()
     da = open(os.path.join(media_dir, "hanzi-data.js"), encoding="utf-8").read()
+    # bake the configured leniency preset into the widget's build default (the in-review
+    # ⚙ button + localStorage override it per device)
+    lev = conf.get("leniency") or "moderate"
+    assert lev in ("strict", "moderate", "relaxed"), \
+        "conf leniency must be strict|moderate|relaxed, got %r" % lev
+    marker = "var LENIENCY_DEFAULT = 'moderate';"
+    assert marker in dr, "widget lost its LENIENCY_DEFAULT marker"
+    dr = dr.replace(marker, "var LENIENCY_DEFAULT = %r;" % lev)
     for nm, s in (("hanzi-writer", hw), ("hanzi-drill", dr), ("hanzi-data", da)):
         assert "</script" not in s.lower(), "%s contains a closing script tag" % nm
         assert "{{" not in s, "%s contains field mustaches — Anki substitutes them even inside <script>" % nm

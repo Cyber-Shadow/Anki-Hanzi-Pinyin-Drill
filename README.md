@@ -12,6 +12,15 @@ each character's pinyin** (keyboard or an on-card syllable picker). At the end t
 grades the card automatically: clean → Good, stroke mistakes → Hard, skipped char or
 reading miss → Again.
 
+> **Vibe-coded.** This entire repo — widget, installer, tests, README — was written by
+> an AI coding agent (Hermes) pairing with the author, who supplied the requirements,
+> device bug reports and taste ("too lenient", "white on black"), while the agent wrote,
+> tested and committed the code. That means: the test suite and round-trip checks are
+> real and were actually run, but no human has read every line. Treat the widget JS as
+> something to try, not something to trust blindly — back up your templates first
+> (`install.py` does this automatically) and expect the occasional AnkiDroid quirk to
+> need a fresh fight.
+
 Status: **v0.5** — installed in the author's `Mandarin` note type (both card types),
 driven by this repo's widget source. Long-term plan (not started): a standalone Kotlin
 app with a native port of the grader (its stroke matcher was validated against real

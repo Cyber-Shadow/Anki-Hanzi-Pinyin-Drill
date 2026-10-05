@@ -39,16 +39,19 @@ Generated artifacts you can delete/regenerate (git-ignored): `hanzi-drill-proto.
 
 ## Getting started
 
-1. **Prereqs** — Anki desktop with the
+1. **Prereqs** — Anki desktop with
+   [AnkiConnect](https://foosoft.net/projects/anki-connect/) (code `2055492159` in
+   *Tools → Get Add-ons*, default `http://localhost:8765` — the plain HTTP API, no AI
+   agent needed) **or** the
    [Anki MCP server add-on](https://github.com/ankimcp/anki-mcp-server-addon)
-   (streamable-HTTP MCP bridge, `http://127.0.0.1:3141/` by default — AnkiConnect
-   underneath), Python 3, Node.js. On the phone: AnkiDroid + the same collection via
-   AnkiWeb.
+   (streamable-HTTP MCP bridge, `http://127.0.0.1:3141/`), Python 3, Node.js. On the
+   phone: AnkiDroid + the same collection via AnkiWeb.
 2. **Configure** — edit `hanzi-drill.conf.json`:
 
    ```json
    {
-     "mcpUrl": "http://127.0.0.1:3141/",
+     "mcpUrl": "http://localhost:8765",
+     "backend": null,
      "model": "Mandarin",
      "charsField": "Characters",
      "pinyinField": "Pinyin",
@@ -56,6 +59,10 @@ Generated artifacts you can delete/regenerate (git-ignored): `hanzi-drill-proto.
      "readingTemplate": null
    }
    ```
+
+   `mcpUrl` points at whichever bridge you installed (AnkiConnect `:8765` or the MCP
+   server `:3141`); `backend` may be `"ankiconnect"` / `"mcp"` or `null` to auto-probe
+   (recommended — the probe distinguishes the two). Both paths were round-trip tested.
 
    `model` is your note type; `charsField`/`pinyinField` are the fields holding the
    characters and their pinyin. The widget needs a note type with **two card types**:

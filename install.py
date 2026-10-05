@@ -20,7 +20,7 @@ UNINSTALL = "--uninstall" in sys.argv
 BACKUP_ONLY = "--backup" in sys.argv
 
 conf = hd.load_conf()
-call = hd.make_call(conf["mcpUrl"])
+call = hd.make_call(conf["mcpUrl"], conf.get("backend"))
 B = hd.blocks(conf)
 
 tpl = call("model_templates", {"model_name": conf["model"]})["templates"]

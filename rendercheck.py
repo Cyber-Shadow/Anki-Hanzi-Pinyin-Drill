@@ -6,7 +6,7 @@ import os, shutil, tempfile, re
 import hd_common as hd
 
 conf = hd.load_conf()
-call = hd.make_call(conf["mcpUrl"])
+call = hd.make_call(conf["mcpUrl"], conf.get("backend"))
 
 tpl = call("model_templates", {"model_name": conf["model"]})["templates"]
 sty = call("model_styling", {"model_name": conf["model"]})["css"]

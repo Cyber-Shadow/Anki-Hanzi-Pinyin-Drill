@@ -3,7 +3,8 @@ and the widget blocks. Used by install.py and rendercheck.py.
 
 Config (hanzi-drill.conf.json next to this file, all keys optional):
   {
-    "mcpUrl":        "http://127.0.0.1:3141/",   # Anki MCP / AnkiConnect bridge
+    "mcpUrl":        "http://127.0.0.1:3141/",   # Anki MCP bridge (or AnkiConnect URL)
+    "backend":       null,                       # "mcp" | "ankiconnect" | null = auto-probe
     "model":         "Mandarin",                 # note type to patch
     "charsField":    "Characters",               # field holding the hanzi
     "pinyinField":   "Pinyin",                   # field holding per-char pinyin (space or concatenated)
@@ -19,6 +20,7 @@ import json, os, sys, urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 DEFAULTS = {
     "mcpUrl": "http://127.0.0.1:3141/",
+    "backend": None,          # null -> probe: AnkiConnect first, then MCP
     "model": "Mandarin",
     "charsField": "Characters",
     "pinyinField": "Pinyin",
@@ -33,15 +35,19 @@ def load_conf():
         conf.update(json.load(open(p, encoding="utf-8")))
     return conf
 
+def _http(url, body, accept=None):
+    HDR = {"Content-Type": "application/json"}
+    if accept: HDR["Accept"] = accept
+    req = urllib.request.Request(url, data=json.dumps(body).encode(), headers=HDR)
+    return urllib.request.urlopen(req, timeout=120).read().decode(errors="replace")
+
 _reqid = [0]
-def make_call(url):
-    HDR = {"Content-Type": "application/json", "Accept": "application/json, text/event-stream"}
+def _make_mcp_call(url):
     def call(name, args=None):
         _reqid[0] += 1
         body = {"jsonrpc": "2.0", "id": _reqid[0], "method": "tools/call",
                 "params": {"name": name, "arguments": args or {}}}
-        req = urllib.request.Request(url, data=json.dumps(body).encode(), headers=HDR)
-        out = urllib.request.urlopen(req, timeout=120).read().decode(errors="replace")
+        out = _http(url, body, accept="application/json, text/event-stream")
         for line in out.splitlines():
             if line.startswith("data: "):
                 d = json.loads(line[6:])
@@ -52,6 +58,61 @@ def make_call(url):
                 except json.JSONDecodeError: return t
         raise RuntimeError("no data frame: " + out[:200])
     return call
+
+# AnkiConnect (github.com/FooSoft/anki-connect, default http://localhost:8765) speaks
+# plain {"action","version","params"} HTTP JSON. Tool names above are AnkiConnect action
+# names with MCP-flavoured arguments, so the adapter translates keys AND emulates the
+# MCP bridge's patch mode (old_str/new_str) on top of AnkiConnect's full-replace API.
+def _make_ankiconnect_call(url):
+    def raw(name, params):
+        d = json.loads(_http(url, {"action": name, "version": 6, "params": params}))
+        if d.get("error"): raise RuntimeError(d["error"])
+        return d["result"]
+    def call(name, args=None):
+        a = dict(args or {})
+        if name == "model_templates":
+            r = raw("modelTemplates", {"modelName": a.get("model_name")})
+            # be tolerant of both shapes: {'Front':...} (current) / {'Front Template':...}
+            return {"templates": {n: {"Front": t.get("Front", t.get("Front Template", "")),
+                                      "Back": t.get("Back", t.get("Back Template", ""))}
+                                  for n, t in (r or {}).items()}}
+        if name == "model_styling":
+            r = raw("modelStyling", {"modelName": a.get("model_name")})
+            return {"css": r["css"] if isinstance(r, dict) else (r or "")}
+        if name == "update_model_templates":
+            # patch mode -> read current side, apply old_str->new_str, write full side
+            cur = call("model_templates", {"model_name": a["model_name"]})["templates"]
+            side, old, new = a["side"], a["old_str"], a["new_str"]
+            html = cur[a["template_name"]][side]
+            if html != old and html.count(old) != 1:
+                raise RuntimeError("AnkiConnect patch: old_str must match the current %s "
+                                   "exactly once (matches=%d)" % (side, html.count(old)))
+            full = new if html == old else html.replace(old, new, 1)
+            return raw("updateModelTemplates", {"model": {"name": a["model_name"],
+                "templates": {a["template_name"]: {side: full}}}})
+        if name == "update_model_styling":
+            cur = call("model_styling", {"model_name": a["model_name"]})["css"]
+            old, new = a["old_str"], a["new_str"]
+            if cur != old and cur.count(old) != 1:
+                raise RuntimeError("AnkiConnect patch: old_str must match the current CSS "
+                                   "exactly once (matches=%d)" % cur.count(old))
+            return raw("updateModelStyling", {"model": {"name": a["model_name"],
+                "css": new if cur == old else cur.replace(old, new, 1)}})
+        return raw(name, {k.replace("_", ""): v for k, v in a.items()})
+    return call
+
+def probe_backend(url):
+    """AnkiConnect answers {result,error} to any action; the MCP bridge rejects it."""
+    try:
+        d = json.loads(_http(url, {"action": "version", "version": 6}))
+        if "result" in d and "error" in d: return "ankiconnect"
+    except Exception:
+        pass
+    return "mcp"
+
+def make_call(url, backend=None):
+    backend = backend or probe_backend(url)
+    return _make_ankiconnect_call(url) if backend == "ankiconnect" else _make_mcp_call(url)
 
 MARKER = "<!-- hanzi-drill -->"
 CSS_MARK = "/* hanzi-drill */"
